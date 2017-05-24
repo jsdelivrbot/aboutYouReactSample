@@ -9,20 +9,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import createSagaMiddleware from 'redux-saga'
-import thunk from 'redux-thunk';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ReduxPromise from 'redux-promise';
 
-// import App from './components/app';
+// import Components for the application
 import CategoryList from './components/category_list';
 import CategoryOverview from './containers/category_overview';
 import ItemDetail from './components/item_detail';
 
+// import the root reducer
 import reducers from './reducers';
-import { root } from './sagas/saga';
-
-const sagaMiddleware = createSagaMiddleware();
 
 // well.. create redux store
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
@@ -32,6 +28,8 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <div>
+        <img src="https://s3-eu-west-1.amazonaws.com/aboutyoureactsample/about-you_react1.png" alt=""/>
+        <h1>React Sample</h1>
         <Switch>
           <Route path="/category/onlyOne" component={ CategoryOverview }></Route>
           <Route path="/product/:id"  component={ ItemDetail }></Route>

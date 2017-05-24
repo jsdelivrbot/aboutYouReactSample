@@ -7,6 +7,7 @@ import ItemsReducer from './items_reducer';
 // import singleItem reducer
 import SingleItemReducer from './single_item_reducer';
 
+// el root reducer!
 const rootReducer = combineReducers({
   category: CategoryReducer,
   items: ItemsReducer,

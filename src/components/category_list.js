@@ -1,5 +1,6 @@
 // this is the most parent component for the About You App
 import React, { Component } from 'react';
+// import Link from router 
 import { Link } from 'react-router-dom';
 
 // since there's nothing else to be exported, export default is appropriated to use ;)
@@ -28,13 +29,12 @@ class CategoryList extends Component {
   render() {
     return(
       <div>
-        <h1>About You</h1>
-      <h3>Category</h3>
-      <ul>
-        <li>
-          <Link to="/category/onlyOne"> Only Category</Link>
-        </li>
-      </ul>
+        <h3>Category</h3>
+        <ul className="list-group">
+          <li className="list-group-item">
+            <Link to="/category/onlyOne">Only Category</Link>
+          </li>
+        </ul>
       </div>
     );
   }

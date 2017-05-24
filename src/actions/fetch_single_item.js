@@ -7,8 +7,10 @@ import axios from 'axios';
 export const FETCH_SINGLE_ITEM = 'FETCH_SINGLE_ITEM';
 
 // export fetch function
+// takes a parameter id
+// @param {int}
+// returns one "fashion" object
 export function fetchSingleItem(id) {
-  debugger
   const url = `https://m.aboutyou.de/api/products/v2/getProducts?productId=${id}`;
   const request = axios.get(url);
 

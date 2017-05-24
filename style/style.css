@@ -1,0 +1,22 @@
+.col-sm-6.col-md-4 {
+  height: 400px;
+  cursor: pointer;
+}
+
+.thumbnail {
+  border: 1px solid gray;
+  text-align: center;
+  height: 300px;
+}
+
+.thumbnail:hover {
+  box-shadow: 1px 1px 1px 1px gray;
+}
+
+.thumbnail > img {
+  margin: 20px;
+}
+
+.btn {
+  margin: 30px 0;
+}

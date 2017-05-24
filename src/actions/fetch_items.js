@@ -7,8 +7,10 @@ import axios from 'axios';
 export const FETCH_ITEMS = 'FETCH_ITEMS';
 
 // export fetch function
+// takes a parameter items
+// @param {String}
+// returns all the items
 export function fetchItems(items) {
-  debugger
   const ITEMS = items.toString();
   const url = `https://m.aboutyou.de/api/products/v2/getProducts?productId=${ITEMS}`;
   const request = axios.get(url);
